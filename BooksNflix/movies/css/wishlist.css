@@ -1,0 +1,55 @@
+.wishlist-container {
+  display: flex;
+  align-items: center;
+  height: 41px;
+  width: 30px;
+  margin-left: 0px;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+.wishlist {
+  color: #efff0e;
+  font-size: 50px;
+  margin-left: 10px;
+  /* box-shadow: 0 0.3px 9px 1.6px rgba(0, 0, 0, 0.281); */
+  filter: drop-shadow(0 0.3px 9px rgba(0, 0, 0, 0.281));
+  display: flex;
+}
+.circle {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-left: 10%;
+  box-shadow: 0.2px 0.2px 2px 0.9px rgba(39, 36, 36, 0.295);
+  background-color: rgb(255, 255, 255);
+}
+.heart {
+  font-size: 12px;
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  color: rgb(199, 199, 199);
+  pointer-events: none;
+}
+/* .wishlist:active + .circle .heart {
+  transition: 250ms;
+  color: rgb(255, 0, 0);
+  filter: drop-shadow(0.1px 0.1px 1px rgba(255, 0, 0, 0.938));
+}
+.circle:active .heart {
+  transition: 250ms;
+  color: rgb(255, 0, 0);
+  filter: drop-shadow(0.1px 0.1px 1px rgba(255, 0, 0, 0.938));
+} */
+
+/* using js this is active after clicking */
+
+.added-to-wishlist {
+  transition: 250ms;
+  color: rgb(255, 0, 0);
+  filter: drop-shadow(0.1px 0.1px 1px rgba(255, 0, 0, 0.938));
+}

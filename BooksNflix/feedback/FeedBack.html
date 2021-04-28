@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/FeedBack.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <title>Feed Back</title>
+  </head>
+  <body>
+    <div class="plane">
+      <button class="scroll-btn--up">
+        <class class="fas fa-location-arrow"></class>
+      </button>
+    </div>
+    <div class="form-chat-bot">
+      <form class="input-chat">
+        <img src="Group 1.svg" alt="logo" style="margin: 10px 0 20px 0;"
+        height="35px"">
+
+        <p>
+          <label class="psedueo" placeholder="Your Name" for="Name">Name</label>
+          <input
+            class="input-name"
+            type="text"
+            name="Name"
+            id="Name"
+            required
+          />
+        </p>
+
+        <p>
+          <label class="psedueo" placeholder="Your E-Mail" for="E_mail">E Mail</label>
+          <input
+            class="input"
+            type="text"
+            name="E_mail"
+            id="E_mail"
+            required
+          />
+        </p>
+
+        <p>
+          <label class="psedueo" placeholder="Write something.." for="FeedBack">FeedBack</label>
+          <textarea
+            class="input"
+            type="textarea"
+            name="FeedBack"
+            id="FeedBack"
+            row="10"
+            required>
+          </textarea>
+      
+            
+        </p>
+        
+        <h1 class="alert">* Fill all the information !!!!</h1>
+        <button class="btn-1-bot submit">Submit</button>
+      </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+    <script src="FeedBackjs.js"></script>
+  </body>
+</html>

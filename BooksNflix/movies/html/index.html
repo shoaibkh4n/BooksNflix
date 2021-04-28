@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header class="primary-header">
+
+        
+            <nav class="navbar">
+              
+  
+              <a href="/"><img src="/images/logo.png" alt="logo" class="logo"></img></a>
+                <ul class="list-item">
+                  <li class="cool-underline"><a href="/">Home</a></li>
+                  <li class="cool-underline"><a href="/">Movies</a></li>
+                  <li class="cool-underline"><a href="/books/booksmain.html">Books</a></li>
+                  <li class="cool-underline"><a href="/Platform/platform.html">OTT</a></li>
+                  <li class = "cool-underline"><a href="/feedback/FeedBack.html">Feedback</a></li>
+      
+              
+      
+                  <li class="search-bar">
+                    <form action="/" class="search-bar-fix">
+                    <input type="text" class="search-input" placeholder="Search..." />
+                    <label for="search-input"></label>
+                    <button type="submit" class="search-btn" role="button" aria-label="Search Button">
+                      <i class="fa fa-search " aria-hidden="true"></i>
+                    </button>
+                  </form>
+                  </li>
+                  <!-- Search bar End  -->
+      
+                  <!-- User Profile And Registraion  -->
+      
+                  <!-- <li class="signin-btn"><a href="#"><i class="far fa-user" aria-hidden="true"></i>&nbsp&nbspRegister / Sign In</a></li>
+                  
+            
+                  <li class="user"><div class="user-profile"><i class="far fa-user" aria-hidden="true"><span class="wrap">&nbsp&nbspNAME(Check for the ellipses)</span></i>
+                  <div class="details">
+                    <ul class="user-info">
+                      <li class="invisible"></li>
+                      <li class="user-content before-element"><a href="/"><i class="fa fa-user" aria-hidden="true"></i>&nbsp&nbsp<span class="profile-text-in-popup">Profile</span></a></li>
+      
+                      <hr class="horizontal-line">
+                      <li class="wishlist-btn before-element"><a href="/"><i class="fas fa-bookmark"></i>&nbsp&nbsp&nbspWishlist</a></li>
+      
+                      <hr class="horizontal-line">
+                      <li class="signout-btn before-element"><a href="/"><i class="fa fa-power-off" aria-hidden="true"></i>&nbsp&nbspSign out</a></li>
+                    </ul>
+                  </div>
+                </div>
+                </li> -->
+      
+                  <!-- Profile and registraion end  -->
+      
+                </ul>
+             
+            </nav>
+      
+            <!-- Navbar End  -->
+      
+          </header>
+          
+          <div class="container">
+
+
+          
+          </div>
+          <div  id="disqus_thread" class="comment" ></div>
+
+    
+  
+    <!-- The Disqus Script adds from here  -->      
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+
+    <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://booksnflix.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+    <script src="../js/movieFirebase.js"></script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    <!-- The Disqus Script ends here  -->
+</body>
+</html>

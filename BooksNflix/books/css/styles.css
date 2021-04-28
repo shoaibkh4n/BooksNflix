@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import "./wishlist.css";
+html {
+  overflow-x: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #243b55,
+    #141e30
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #243b55,
+    #141e30
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Poppins", sans-serif;
+
+  --yellow: #efff0e;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Primary header And NavBar  */
+
+.primary-header {
+  display: flex;
+  justify-content: center;
+  padding: 5px 16px;
+  font-family: "Poppins", sans-serif;
+  font-size: medium;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #141e30c0;
+  padding: 5px 8px 0 8px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  width: 80%;
+  color: #c1c4ca;
+}
+nav li a {
+  color: #c1c4ca;
+  text-decoration: none;
+  /* transition: 0.5s; */
+  transition-timing-function: linear;
+}
+nav li::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 0px;
+  background-color: #efff0e;
+  transition: 0.2s;
+  transition-timing-function: linear;
+  z-index: -2;
+  top: 55px;
+}
+.signin-btn a::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 0px;
+  background-color: #efff0e;
+  transition: 0.2s;
+  transition-timing-function: linear;
+  z-index: -2;
+  top: 55px;
+}
+
+/* user pop-up and Sign-out*/
+
+.user {
+  position: relative;
+}
+.details {
+  height: auto;
+  width: 150px;
+  top: 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: -26%;
+  position: absolute;
+  z-index: 100;
+  background-color: #124053f1;
+  padding: 15px;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.25s linear;
+}
+.details::before {
+  content: "\25B2"; /* \25B2 is this symbol "▲".. According to UTF-8 encoding ;  */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -74%);
+  color: #124053f1;
+  font-size: 24px;
+}
+.details::after {
+  content: "";
+  position: absolute;
+  height: 26%;
+  width: 100%;
+  top: -23px;
+}
+
+.details ul {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+.before-element a::before {
+  content: "\2B9E"; /* \2B9E is this symbol "⮞".. According to UTF-8 encoding ;  */
+  position: absolute;
+  font-size: 15px;
+  right: 85%;
+  color: #efff0e;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s linear;
+}
+
+.before-element:hover a::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.user:hover .details {
+  visibility: visible;
+  opacity: 1;
+}
+.horizontal-line {
+  height: 0.1px;
+  width: 100%;
+  margin: 10px;
+
+  color: #c1c4ca71;
+}
+.profile-text-in-popup {
+  margin-right: 6px;
+  margin-left: 3px;
+}
+.user-content {
+  margin-right: 4px;
+}
+/* nav continue */
+nav li:nth-child(6)::before {
+  content: "";
+  height: 0px;
+  width: 0px;
+}
+.user-content + li::before {
+  content: "";
+  height: 0px;
+  width: 0px;
+}
+.invisible + .user-content::before {
+  content: "";
+  height: 0px;
+  width: 0px;
+}
+
+.horizontal-line + .signout-btn::before {
+  content: "";
+  height: 0px;
+  width: 0px;
+}
+
+.horizontal-line + .wishlist-btn::before {
+  content: "";
+  height: 0px;
+  width: 0px;
+}
+/* nav li hover started */
+nav li:nth-child(1):hover::before {
+  background-color: #efff0e;
+  width: 50px;
+}
+nav li:nth-child(2):hover::before {
+  background-color: #efff0e;
+  width: 57px;
+}
+nav li:nth-child(3):hover::before {
+  background-color: #efff0e;
+  width: 49px;
+}
+nav li:nth-child(4):hover::before {
+  background-color: #efff0e;
+  width: 33px;
+}
+nav li:nth-child(5):hover::before {
+  background-color: #efff0e;
+  width: 80px;
+}
+.signin-btn a:hover::before {
+  background-color: #efff0e;
+  width: 157px;
+}
+
+nav li a:hover {
+  color: #ededee;
+}
+/* nav li hover ends  */
+
+/*Search Bar*/
+
+.search-bar {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.search-input {
+  padding: 5px 10px;
+  outline: none;
+  height: 100%;
+  width: 188.8px;
+}
+.search-bar-fix {
+  height: 34px;
+  width: 236.08px;
+}
+.search-input[type="text"] {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+.search-btn {
+  height: 100%;
+  width: 43px;
+  background: #efff0e;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: rgb(15, 15, 15);
+  cursor: pointer;
+  padding-top: 1px;
+}
+.wrap {
+  display: inline-block;
+  max-width: 90px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-block: -2px;
+}
+
+.wraper-container {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Make the image responsive */
+.container img {
+  z-index: -2;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: opacity(0.4);
+}
+.button-wrap {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 5%;
+}
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  background-color: rgb(0 15 218 / 65%);
+  color: white;
+  font-size: 16px;
+  padding: 9px 35px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.star:hover {
+  color: #ffd700;
+  filter: drop-shadow(0.2px 0.2px 5px #ffd700);
+}
+.desc1 {
+  color: rgb(255 255 255);
+  font-family: "Staatliches", cursive;
+  font-size: 60px;
+  font-weight: 500;
+  margin-top: 8.9%;
+}
+.desc2 {
+  color: rgb(255, 255, 255);
+  width: 68%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: larger;
+  font-weight: 500;
+  margin-top: 8%;
+}
+
+.container .btn:hover {
+  background-color: rgb(53, 93, 202);
+}
+.h-secondary {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: -29px;
+}
+.container .btn2 {
+  background-color: #ff0000c4;
+  color: white;
+  color: white;
+  font-size: 16px;
+  padding: 7px 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.button-wrap a {
+  text-decoration: none;
+  color: white;
+}
+.container .btn2:hover {
+  background-color: rgb(243, 74, 74);
+}
+
+.comment {
+  background: linear-gradient(to bottom, #ffffff, #9ed9f0);
+  /* background-color: black; */
+  opacity: 0.9;
+  padding: 14px 29px;
+  position: relative;
+  margin: 20px 50px 50px 50px;
+  border-radius: 10px;
+}
